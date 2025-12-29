@@ -1,0 +1,120 @@
+/* Styles for the container holding the cards */
+.container-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card-list h3,
+  .card-list p {
+    font-family: Montserrat bold, sans-serif;
+    /* Replace 'Your-Desired-Font' with the actual font name you want to use */
+  }
+
+/* Styles for each card */
+.card-list {
+  width: calc(25% - 20px);
+  height: 400px;
+  perspective: 1500px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-list .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-list.flipped {
+  transform: rotateY(180deg);
+}
+
+.front-list,
+.back-list {
+  width: 100%;
+  height: 100%;
+  background-color: #c261ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.front-list img {
+  max-width: 100%;
+  height: auto;
+}
+
+.back-list {
+  transform: rotateY(180deg);
+}
+
+.card-list.flipped .back-list {
+  display: flex;
+}
+
+.back-list button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #8b6969;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-list:hover .front-list {
+  transform: rotateY(170deg);
+}
+
+/* Styles for the filter panel on the left */
+.sidebar {
+  width: 20%; /* Adjust the width as needed */
+  height: 100vh; /* Make the filter panel full height */
+  padding: 20px;
+  background-color: #f0f0f0; /* Change the background color as desired */
+  float: left; /* Float the filter panel to the left */
+}
+
+/* Styles for the container holding the cards on the right */
+.container-list {
+  width: 80%; /* Adjust the width as needed */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  margin-left: 10px; /* Add some left margin for spacing */
+}
+
+/* Add media queries to make the layout responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Make the filter panel full-width on smaller screens */
+    height: auto; /* Reset the height on smaller screens */
+  }
+
+  .container-list {
+    width: 100%; /* Make the listings full-width on smaller screens */
+    margin-left: 0; /* Remove left margin on smaller screens */
+  }
+}

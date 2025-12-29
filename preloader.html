@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/preloader.css">
+    <script src="js/preloader.js"></script>
+    <title>Random Quote Preloader</title>
+    <script>
+            // Redirect to the home page after 2 seconds (2000 milliseconds)
+            setTimeout(function() {
+                window.location.href = "index.php"; // Replace with the actual URL of your home page
+            }, 3000); // 3 seconds delay
+        //}
+
+        // Call the hidePreloaderAndRedirect function when the page is fully loaded
+        window.addEventListener("load", hidePreloaderAndRedirect);
+    </script>
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader"></div>
+        <div class="quote-container">
+            <p class="quote" id="quote"></p>
+            <!--<p class="author" id="author"></p>-->
+        </div>
+    </div>
+</body>
+</html>

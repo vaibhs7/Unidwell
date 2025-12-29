@@ -1,0 +1,83 @@
+body {
+    background-color: #d2b3e3; /* Color of the webpage background */
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    padding: 50px;
+    max-width: 900px;
+    background-color: #ece5f0; /* Color of the box */
+    border-radius: 10px;
+}
+
+.form-container label {
+    color: #010101; /* Color of the labels */
+}
+
+.editprofilecontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 50px;
+    background-color: #310e44; /* Color of the form container */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.editprofilecontainer h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #ffffff; /* Color of the "Edit Profile" text */
+}
+
+/* Add styles for input fields */
+.editprofilecontainer input[type="text"], 
+.editprofilecontainer input[type="email"], 
+.editprofilecontainer input[type="tel"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ffffff; /* Border color of the input fields */
+    background-color: #ffffff; /* Background color of the input fields */
+}
+
+.editprofilecontainer button {
+    background-color: #d2b3e3; /* Background color of the button */
+    color: #010101; /* Text color of the button */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Add margin to the paragraph element */
+p {
+    margin: 20px 0px;
+}
+
+/* Style links with a higher font weight */
+.link {
+    font-weight: 800;
+}
+
+/* Media query for screens with a maximum width of 450px */
+@media screen and (max-width: 450px) {
+    .listcontainer {
+        max-width: 100%;
+    }
+}

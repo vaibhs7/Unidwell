@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: #7b4397; /* Changed the background color to purple */
+}
+
+.listcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff; /* Kept the form color as it is */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    color: #7b4397;
+    font-weight: 900;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input[type="text"] {
+    outline: none;
+    border: 2px solid #000;
+    box-shadow: 3px 4px 0px 1px #000;
+    width: 300px;
+    padding: 15px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 15px; /* Added space between textboxes */
+}
+
+input[type="text"]:focus, button[type="submit"]:focus{
+    transform: translateY(4px);
+    box-shadow: 1px 2px 0px 0px #000;
+}
+
+button[type="submit"] {
+    padding: 15px;
+    margin: 30px 0px;
+    width: 310px;
+    font-size: 15px;
+    background: #7b4397;
+    border-radius: 30px;
+    font-weight: 800;
+    box-shadow: 5px 5px 0px 0px #000;
+}
+
+p{
+    margin: 20px 0px;
+}
+
+.link{
+    font-weight: 800;
+}
+
+@media screen and (max-width: 450px) {
+.listcontainer {
+  max-width: 100%;
+}
+}
